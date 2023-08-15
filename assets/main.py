@@ -13,7 +13,7 @@ templates = Jinja2Templates(directory="templates")  # Specify the directory wher
 
 @app.get("/", response_class=HTMLResponse)
 async def chatbot_page(request: Request):
-    return templates.TemplateResponse("chatbot.html", {"request": request})
+    return templates.TemplateResponse("base.html", {"request": request})
 
 @app.get("/ping")
 def read_root():
