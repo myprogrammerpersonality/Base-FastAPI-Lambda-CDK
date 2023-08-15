@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 import aws_cdk as cdk
 
-from stacks.bot_stack import BotStack
+from stacks.app_stack import AppStack
 
 
 app = cdk.App()
 
-BotStack(app, "BotStack")
+AppStack(app, "AppStack")
 
 cdk.Tags.of(app).add(key="owner", value="ali@datachef.co")
 cdk.Tags.of(app).add(key="application", value="FastAPI")
